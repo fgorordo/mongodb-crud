@@ -6,8 +6,8 @@ const router = Router();
 
 export default router
     .get('/api/tasks', taskController.listAllTask)
+    .post("/api/tasks", taskController.createTask)
     .get("/api/tasks/:_id", taskController.getOneTask)
-    .post("/api/tasks/add", taskController.createTask)
-    .patch("/api/tasks/edit/:_id", taskController.editOneTask)
-    .patch("/api/tasks/toggleDone/:_id", taskController.getDoneTask)
+    .patch("/api/tasks/:_id", taskController.editOneTask)
     .delete("/api/tasks/:_id", taskController.deleteOneTask)
+    .patch("/api/tasks/toggle/:_id", taskController.getDoneTask)

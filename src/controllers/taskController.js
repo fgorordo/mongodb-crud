@@ -6,7 +6,6 @@ const taskController = {
         try {
             let task = req.body;
             let createdTask = await taskService.createNewTask(task)
-            console.log(createdTask)
             return res.status(200).json({
                 code: 200,
                 status: "Ok",

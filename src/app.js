@@ -1,7 +1,10 @@
 import express from "express";
-import indexRoutes from "./routes/index.routes";
+import indexRoutes from "./routes/api/index.routes";
 import morgan from "morgan";
+import dotenv from "dotenv";
 
+// ENV
+dotenv.config();
 // Initializing 
 const app = express();
 
